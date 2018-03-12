@@ -40,14 +40,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.discountPrice = new System.Windows.Forms.TextBox();
+            this.regularPrice = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.regularPrice = new System.Windows.Forms.TextBox();
-            this.discountPrice = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,6 +54,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.readDataButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -176,6 +177,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dane wejsciowe";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(141, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "1 = 200 szt";
+            // 
+            // discountPrice
+            // 
+            this.discountPrice.Location = new System.Drawing.Point(121, 151);
+            this.discountPrice.Name = "discountPrice";
+            this.discountPrice.Size = new System.Drawing.Size(100, 20);
+            this.discountPrice.TabIndex = 14;
+            this.discountPrice.Text = "6";
+            // 
+            // regularPrice
+            // 
+            this.regularPrice.Location = new System.Drawing.Point(121, 120);
+            this.regularPrice.Name = "regularPrice";
+            this.regularPrice.Size = new System.Drawing.Size(100, 20);
+            this.regularPrice.TabIndex = 13;
+            this.regularPrice.Text = "12";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -194,36 +220,16 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Regularna cena";
             // 
-            // regularPrice
-            // 
-            this.regularPrice.Location = new System.Drawing.Point(121, 120);
-            this.regularPrice.Name = "regularPrice";
-            this.regularPrice.Size = new System.Drawing.Size(100, 20);
-            this.regularPrice.TabIndex = 13;
-            this.regularPrice.Text = "12";
-            // 
-            // discountPrice
-            // 
-            this.discountPrice.Location = new System.Drawing.Point(121, 151);
-            this.discountPrice.Name = "discountPrice";
-            this.discountPrice.Size = new System.Drawing.Size(100, 20);
-            this.discountPrice.TabIndex = 14;
-            this.discountPrice.Text = "6";
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(322, 256);
+            this.dataGridView1.Location = new System.Drawing.Point(294, 253);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(521, 150);
             this.dataGridView1.TabIndex = 12;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Zamówienie";
-            this.Column1.Name = "Column1";
             // 
             // label8
             // 
@@ -233,15 +239,6 @@
             this.label8.Size = new System.Drawing.Size(33, 13);
             this.label8.TabIndex = 14;
             this.label8.Text = "Koszt";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(141, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "1 = 200 szt";
             // 
             // label10
             // 
@@ -306,11 +303,26 @@
             this.label17.TabIndex = 22;
             this.label17.Text = "Dochod";
             // 
+            // readDataButton
+            // 
+            this.readDataButton.Location = new System.Drawing.Point(540, 32);
+            this.readDataButton.Name = "readDataButton";
+            this.readDataButton.Size = new System.Drawing.Size(133, 37);
+            this.readDataButton.TabIndex = 23;
+            this.readDataButton.Text = "Wczytaj dane z pliku";
+            this.readDataButton.UseVisualStyleBackColor = true;
+            this.readDataButton.Click += new System.EventHandler(this.readDataButton_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 466);
+            this.ClientSize = new System.Drawing.Size(827, 466);
+            this.Controls.Add(this.readDataButton);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -351,7 +363,6 @@
         private System.Windows.Forms.TextBox discountPrice;
         private System.Windows.Forms.TextBox regularPrice;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -361,6 +372,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button readDataButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
