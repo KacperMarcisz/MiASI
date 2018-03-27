@@ -46,18 +46,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
+            this.CostValue = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.IncomeValue = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.IncomeValue2 = new System.Windows.Forms.Label();
+            this.ProfitValue = new System.Windows.Forms.Label();
             this.readDataButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.CalculateValuesButton = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -225,20 +228,20 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(294, 253);
+            this.dataGridView1.Location = new System.Drawing.Point(211, 252);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(521, 150);
             this.dataGridView1.TabIndex = 12;
             // 
-            // label8
+            // CostValue
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(106, 283);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Koszt";
+            this.CostValue.AutoSize = true;
+            this.CostValue.Location = new System.Drawing.Point(106, 283);
+            this.CostValue.Name = "CostValue";
+            this.CostValue.Size = new System.Drawing.Size(33, 13);
+            this.CostValue.TabIndex = 14;
+            this.CostValue.Text = "Koszt";
             // 
             // label10
             // 
@@ -267,14 +270,14 @@
             this.label12.TabIndex = 17;
             this.label12.Text = "Dochód";
             // 
-            // label13
+            // IncomeValue
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(106, 310);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 13);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Przychod";
+            this.IncomeValue.AutoSize = true;
+            this.IncomeValue.Location = new System.Drawing.Point(106, 310);
+            this.IncomeValue.Name = "IncomeValue";
+            this.IncomeValue.Size = new System.Drawing.Size(51, 13);
+            this.IncomeValue.TabIndex = 18;
+            this.IncomeValue.Text = "Przychód";
             // 
             // label15
             // 
@@ -285,23 +288,23 @@
             this.label15.TabIndex = 20;
             this.label15.Text = "Przychód2";
             // 
-            // label16
+            // IncomeValue2
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(106, 340);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 13);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "Przychod2";
+            this.IncomeValue2.AutoSize = true;
+            this.IncomeValue2.Location = new System.Drawing.Point(106, 340);
+            this.IncomeValue2.Name = "IncomeValue2";
+            this.IncomeValue2.Size = new System.Drawing.Size(57, 13);
+            this.IncomeValue2.TabIndex = 21;
+            this.IncomeValue2.Text = "Przychod2";
             // 
-            // label17
+            // ProfitValue
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(106, 367);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 13);
-            this.label17.TabIndex = 22;
-            this.label17.Text = "Dochod";
+            this.ProfitValue.AutoSize = true;
+            this.ProfitValue.Location = new System.Drawing.Point(106, 367);
+            this.ProfitValue.Name = "ProfitValue";
+            this.ProfitValue.Size = new System.Drawing.Size(45, 13);
+            this.ProfitValue.TabIndex = 22;
+            this.ProfitValue.Text = "Dochod";
             // 
             // readDataButton
             // 
@@ -317,20 +320,40 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // CalculateValuesButton
+            // 
+            this.CalculateValuesButton.Location = new System.Drawing.Point(540, 85);
+            this.CalculateValuesButton.Name = "CalculateValuesButton";
+            this.CalculateValuesButton.Size = new System.Drawing.Size(133, 23);
+            this.CalculateValuesButton.TabIndex = 24;
+            this.CalculateValuesButton.Text = "Oblicz Wartosci";
+            this.CalculateValuesButton.UseVisualStyleBackColor = true;
+            this.CalculateValuesButton.Click += new System.EventHandler(this.CalculateValuesButton_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(211, 449);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(521, 150);
+            this.dataGridView2.TabIndex = 25;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 466);
+            this.ClientSize = new System.Drawing.Size(827, 626);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.CalculateValuesButton);
             this.Controls.Add(this.readDataButton);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.ProfitValue);
+            this.Controls.Add(this.IncomeValue2);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.IncomeValue);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.CostValue);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
@@ -339,6 +362,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,17 +387,19 @@
         private System.Windows.Forms.TextBox discountPrice;
         private System.Windows.Forms.TextBox regularPrice;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label CostValue;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label IncomeValue;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label IncomeValue2;
+        private System.Windows.Forms.Label ProfitValue;
         private System.Windows.Forms.Button readDataButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button CalculateValuesButton;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
