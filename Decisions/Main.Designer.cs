@@ -58,9 +58,24 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.CalculateValuesButton = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.calculationButton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Hurwicza = new System.Windows.Forms.Label();
+            this.Walda = new System.Windows.Forms.Label();
+            this.Savagea = new System.Windows.Forms.Label();
+            this.Laplacea = new System.Windows.Forms.Label();
+            this.OW = new System.Windows.Forms.Label();
+            this.OSM = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -341,11 +356,146 @@
             this.dataGridView2.Size = new System.Drawing.Size(521, 150);
             this.dataGridView2.TabIndex = 25;
             // 
+            // calculationButton
+            // 
+            this.calculationButton.Location = new System.Drawing.Point(540, 121);
+            this.calculationButton.Name = "calculationButton";
+            this.calculationButton.Size = new System.Drawing.Size(133, 23);
+            this.calculationButton.TabIndex = 26;
+            this.calculationButton.Text = "Oblicz kryteria";
+            this.calculationButton.UseVisualStyleBackColor = true;
+            this.calculationButton.Click += new System.EventHandler(this.calculationButton_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 38);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 13);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Kryterum Hurwicza";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(14, 111);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(84, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Kryterium Walda";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(14, 218);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 13);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Kryterium Savage\'a";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(14, 282);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(99, 13);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "Kryterium Laplace\'a";
+            // 
+            // label17
+            // 
+            this.label17.Location = new System.Drawing.Point(11, 401);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 33);
+            this.label17.TabIndex = 31;
+            this.label17.Text = "Kryterium oczekiwanej wypłaty(OW)";
+            // 
+            // label18
+            // 
+            this.label18.Location = new System.Drawing.Point(11, 494);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(115, 52);
+            this.label18.TabIndex = 32;
+            this.label18.Text = "Kryterium oczekiwanej straty możliwości (OSM)";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.OSM);
+            this.groupBox2.Controls.Add(this.OW);
+            this.groupBox2.Controls.Add(this.Laplacea);
+            this.groupBox2.Controls.Add(this.Savagea);
+            this.groupBox2.Controls.Add(this.Walda);
+            this.groupBox2.Controls.Add(this.Hurwicza);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Location = new System.Drawing.Point(738, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(284, 571);
+            this.groupBox2.TabIndex = 33;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Kryteria";
+            // 
+            // Hurwicza
+            // 
+            this.Hurwicza.Location = new System.Drawing.Point(160, 24);
+            this.Hurwicza.Name = "Hurwicza";
+            this.Hurwicza.Size = new System.Drawing.Size(100, 87);
+            this.Hurwicza.TabIndex = 33;
+            this.Hurwicza.Text = "-oblicz-";
+            // 
+            // Walda
+            // 
+            this.Walda.Location = new System.Drawing.Point(160, 111);
+            this.Walda.Name = "Walda";
+            this.Walda.Size = new System.Drawing.Size(118, 87);
+            this.Walda.TabIndex = 34;
+            this.Walda.Text = "-oblicz-";
+            // 
+            // Savagea
+            // 
+            this.Savagea.Location = new System.Drawing.Point(171, 213);
+            this.Savagea.Name = "Savagea";
+            this.Savagea.Size = new System.Drawing.Size(89, 52);
+            this.Savagea.TabIndex = 35;
+            this.Savagea.Text = "-oblicz-";
+            // 
+            // Laplacea
+            // 
+            this.Laplacea.Location = new System.Drawing.Point(160, 282);
+            this.Laplacea.Name = "Laplacea";
+            this.Laplacea.Size = new System.Drawing.Size(100, 92);
+            this.Laplacea.TabIndex = 36;
+            this.Laplacea.Text = "-oblicz-";
+            // 
+            // OW
+            // 
+            this.OW.AutoSize = true;
+            this.OW.Location = new System.Drawing.Point(160, 401);
+            this.OW.Name = "OW";
+            this.OW.Size = new System.Drawing.Size(40, 13);
+            this.OW.TabIndex = 37;
+            this.OW.Text = "-oblicz-";
+            // 
+            // OSM
+            // 
+            this.OSM.AutoSize = true;
+            this.OSM.Location = new System.Drawing.Point(171, 494);
+            this.OSM.Name = "OSM";
+            this.OSM.Size = new System.Drawing.Size(40, 13);
+            this.OSM.TabIndex = 38;
+            this.OSM.Text = "-oblicz-";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 626);
+            this.ClientSize = new System.Drawing.Size(1034, 626);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.calculationButton);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.CalculateValuesButton);
             this.Controls.Add(this.readDataButton);
@@ -366,6 +516,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,6 +555,20 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button CalculateValuesButton;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button calculationButton;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label OSM;
+        private System.Windows.Forms.Label OW;
+        private System.Windows.Forms.Label Laplacea;
+        private System.Windows.Forms.Label Savagea;
+        private System.Windows.Forms.Label Walda;
+        private System.Windows.Forms.Label Hurwicza;
     }
 }
 

@@ -152,19 +152,97 @@ namespace Decisions
                         .ToString();
 
                     this.dataGridView1.Rows[rowCount].Cells[j].Value = profit;
-
-                    double maxColumnValue = 0.0;
-                    for (var x = 1; x < this.dataGridView1.RowCount; x++)
-                    {
-                        if(Convert.ToDouble(this.dataGridView1.Rows[x].Cells[j].Value) > maxColumnValue)
-                        {
-                            maxColumnValue = Convert.ToDouble(this.dataGridView1.Rows[x].Cells[j].Value);
-                        }
-                    }
-
-                    this.dataGridView2.Rows[rowCount].Cells[j].Value = Convert.ToDouble(profit) - maxColumnValue;
                 }
             }
+
+            for (var i = 0; i < this.dataGridView2.ColumnCount; i++)
+            {
+                double maxColumnValue = 0.0;
+                for (var j = 1; j < this.dataGridView2.RowCount; j++)
+                {
+                    if (Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value) > maxColumnValue)
+                    {
+                        maxColumnValue = Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value);
+                        
+                    }
+
+                }
+
+                for (var j = 1; j < this.dataGridView2.RowCount; j++)
+                {
+                    this.dataGridView2.Rows[j].Cells[i].Value = Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value) - maxColumnValue;
+                }
+            }
+        }
+
+        private void calculationButton_Click(object sender, EventArgs e)
+        {
+            double max = 0.0;
+
+            for (var i = 0; i < this.dataGridView1.ColumnCount; i++)
+            {
+                for (var j = 1; j < this.dataGridView1.RowCount; j++)
+                {
+                    if (Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value) > max)
+                    {
+                        max = Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value);
+                    }
+                }
+            }
+
+            this.Hurwicza.Text = "Najlepsza decyzja (najwieksza wyplata) to: " + max.ToString();
+
+            List<double> waldList = new List<double>();
+            double min = Double.MaxValue;
+            for (var i = 1; i < this.dataGridView1.RowCount; i++)
+            {
+                for (var j = 0; j < this.dataGridView1.ColumnCount; j++)
+                {
+                    if (Convert.ToDouble(this.dataGridView1.Rows[i].Cells[j].Value) < min)
+                    {
+                        min = Convert.ToDouble(this.dataGridView1.Rows[i].Cells[j].Value);
+                    }
+                }
+
+                waldList.Add(min);
+                min = Double.MaxValue;
+            }
+
+            max = waldList.Max();
+            this.Walda.Text = "Najlepsza z najgorszych wyplat to: " + max.ToString();
+
+            List<double> savagaList = new List<double>();
+            for (var i = 1; i < this.dataGridView2.ColumnCount; i++)
+            {
+                for (var j = 0; j < this.dataGridView2.RowCount; j++)
+                {
+                    if (Convert.ToDouble(this.dataGridView2.Rows[i].Cells[j].Value) < min)
+                    {
+                        min = Convert.ToDouble(this.dataGridView2.Rows[i].Cells[j].Value);
+                    }
+                }
+
+                savagaList.Add(min);
+                min = Double.MaxValue;
+            }
+
+            max = savagaList.Max();
+            this.Savagea.Text = "Najmniejsza wsrod najwiekszych strat to: " +  max.ToString();
+            
+            max = 0.0;
+
+            for (var i = 0; i < this.dataGridView1.ColumnCount; i++)
+            {
+                for (var j = 1; j < this.dataGridView1.RowCount; j++)
+                {
+                    if (Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value) > max)
+                    {
+                        max = Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value);
+                    }
+                }
+            }
+
+            this.Laplacea.Text = "Najlepsza decyzja (z takim samym prawdopodobienstwem) to: " + max.ToString();
         }
     }
 }
