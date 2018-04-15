@@ -152,6 +152,17 @@ namespace Decisions
                         .ToString();
 
                     this.dataGridView1.Rows[rowCount].Cells[j].Value = profit;
+
+                    double maxColumnValue = 0.0;
+                    for (var x = 1; x < this.dataGridView1.RowCount; x++)
+                    {
+                        if(Convert.ToDouble(this.dataGridView1.Rows[x].Cells[j].Value) > maxColumnValue)
+                        {
+                            maxColumnValue = Convert.ToDouble(this.dataGridView1.Rows[x].Cells[j].Value);
+                        }
+                    }
+
+                    this.dataGridView2.Rows[rowCount].Cells[j].Value = Convert.ToDouble(profit) - maxColumnValue;
                 }
             }
         }
