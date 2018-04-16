@@ -15,6 +15,7 @@ namespace Decisions
         List<string> firstLine = new List<string>();
         List<string> secondLine = new List<string>();
         int rowCount = 0;
+        int test = 0;
 
         public Main()
         {
