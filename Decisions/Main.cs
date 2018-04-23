@@ -15,7 +15,6 @@ namespace Decisions
         List<string> firstLine = new List<string>();
         List<string> secondLine = new List<string>();
         int rowCount = 0;
-        int test = 0;
 
         public Main()
         {
@@ -179,7 +178,7 @@ namespace Decisions
         private void calculationButton_Click(object sender, EventArgs e)
         {
             double max = 0.0;
-
+            var decyzja = "";
             for (var i = 0; i < this.dataGridView1.ColumnCount; i++)
             {
                 for (var j = 1; j < this.dataGridView1.RowCount; j++)
@@ -187,11 +186,12 @@ namespace Decisions
                     if (Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value) > max)
                     {
                         max = Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value);
+                        decyzja = "a" + i;
                     }
                 }
             }
 
-            this.Hurwicza.Text = "Najlepsza decyzja (najwieksza wyplata) to: " + max.ToString();
+            this.Hurwicza.Text = "Najlepsza decyzja " + decyzja + " (najwieksza wyplata) to: " + max.ToString();
 
             List<double> waldList = new List<double>();
             double min = Double.MaxValue;
@@ -210,7 +210,7 @@ namespace Decisions
             }
 
             max = waldList.Max();
-            this.Walda.Text = "Najlepsza z najgorszych wyplat to: " + max.ToString();
+            this.Walda.Text = "Najlepsza z najgorszych wyplat a" + (waldList.IndexOf(max) + 1) + " to: " + max.ToString();
 
             List<double> savagaList = new List<double>();
             for (var i = 1; i < this.dataGridView2.ColumnCount; i++)
@@ -228,7 +228,7 @@ namespace Decisions
             }
 
             max = savagaList.Max();
-            this.Savagea.Text = "Najmniejsza wsrod najwiekszych strat to: " +  max.ToString();
+            this.Savagea.Text = "Najmniejsza wsrod najwiekszych a" + (savagaList.IndexOf(max) + 1) + " strat to: " +  max.ToString();
             
             max = 0.0;
 
@@ -239,11 +239,65 @@ namespace Decisions
                     if (Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value) > max)
                     {
                         max = Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value);
+                        decyzja = "a" + i;
                     }
                 }
             }
 
-            this.Laplacea.Text = "Najlepsza decyzja (z takim samym prawdopodobienstwem) to: " + max.ToString();
+            this.Laplacea.Text = "Najlepsza decyzja " + decyzja + " (z takim samym prawdopodobienstwem) to: " + max.ToString();
+            
+            max = 0.0;
+            var max2 = 0.0;
+            for (var i = 0; i < this.dataGridView1.ColumnCount; i++)
+            {
+                var posibility = 0.0;
+                if (i == 0)
+                    posibility = Convert.ToDouble(P1Value.Text.Replace(".", ","));
+                if (i == 1)
+                    posibility = Convert.ToDouble(P2Value.Text.Replace(".", ","));
+                if (i == 2)
+                    posibility = Convert.ToDouble(P3Value.Text.Replace(".", ","));
+                if (i == 3)
+                    posibility = Convert.ToDouble(P4Value.Text.Replace(".", ","));
+                for (var j = 1; j < this.dataGridView1.RowCount; j++)
+                {
+                    if (Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value) * posibility > max)
+                    {
+                        max = Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value) * posibility;
+                        max2 = Convert.ToDouble(this.dataGridView1.Rows[j].Cells[i].Value);
+                        decyzja = "a" + i;
+                    }
+                }
+            }
+
+            this.OW.Text = "OW: decyzja: " + decyzja + ": " + max2;
+
+            List<double> osmList = new List<double>();
+            for (var i = 1; i < this.dataGridView2.ColumnCount; i++)
+            {
+                var posibility = 0.0;
+                if (i == 0)
+                    posibility = Convert.ToDouble(P1Value.Text.Replace(".", ","));
+                if (i == 1)
+                    posibility = Convert.ToDouble(P2Value.Text.Replace(".", ","));
+                if (i == 2)
+                    posibility = Convert.ToDouble(P3Value.Text.Replace(".", ","));
+                if (i == 3)
+                    posibility = Convert.ToDouble(P4Value.Text.Replace(".", ","));
+                for (var j = 0; j < this.dataGridView2.RowCount; j++)
+                {
+                    if (Convert.ToDouble(this.dataGridView2.Rows[i].Cells[j].Value) * posibility < min)
+                    {
+                        min = Convert.ToDouble(this.dataGridView2.Rows[i].Cells[j].Value) * posibility;
+                    }
+                }
+
+                osmList.Add(min);
+                min = Double.MaxValue;
+            }
+
+            max = osmList.Max();
+            this.OSM.Text = "OSM: decyzja a" + ": " + max.ToString();
         }
     }
 }

@@ -66,12 +66,20 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Hurwicza = new System.Windows.Forms.Label();
-            this.Walda = new System.Windows.Forms.Label();
-            this.Savagea = new System.Windows.Forms.Label();
-            this.Laplacea = new System.Windows.Forms.Label();
-            this.OW = new System.Windows.Forms.Label();
             this.OSM = new System.Windows.Forms.Label();
+            this.OW = new System.Windows.Forms.Label();
+            this.Laplacea = new System.Windows.Forms.Label();
+            this.Savagea = new System.Windows.Forms.Label();
+            this.Walda = new System.Windows.Forms.Label();
+            this.Hurwicza = new System.Windows.Forms.Label();
+            this.P1 = new System.Windows.Forms.Label();
+            this.P2 = new System.Windows.Forms.Label();
+            this.P3 = new System.Windows.Forms.Label();
+            this.P4 = new System.Windows.Forms.Label();
+            this.P1Value = new System.Windows.Forms.TextBox();
+            this.P2Value = new System.Windows.Forms.TextBox();
+            this.P3Value = new System.Windows.Forms.TextBox();
+            this.P4Value = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -112,7 +120,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 241);
+            this.button1.Location = new System.Drawing.Point(12, 203);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -190,7 +198,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(476, 214);
+            this.groupBox1.Size = new System.Drawing.Size(476, 183);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dane wejsciowe";
@@ -243,7 +251,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(211, 252);
+            this.dataGridView1.Location = new System.Drawing.Point(194, 203);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(521, 150);
@@ -252,7 +260,7 @@
             // CostValue
             // 
             this.CostValue.AutoSize = true;
-            this.CostValue.Location = new System.Drawing.Point(106, 283);
+            this.CostValue.Location = new System.Drawing.Point(106, 241);
             this.CostValue.Name = "CostValue";
             this.CostValue.Size = new System.Drawing.Size(33, 13);
             this.CostValue.TabIndex = 14;
@@ -261,7 +269,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(21, 283);
+            this.label10.Location = new System.Drawing.Point(18, 241);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 13);
             this.label10.TabIndex = 15;
@@ -270,7 +278,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 310);
+            this.label11.Location = new System.Drawing.Point(18, 267);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 16;
@@ -279,7 +287,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 367);
+            this.label12.Location = new System.Drawing.Point(18, 328);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 13);
             this.label12.TabIndex = 17;
@@ -288,7 +296,7 @@
             // IncomeValue
             // 
             this.IncomeValue.AutoSize = true;
-            this.IncomeValue.Location = new System.Drawing.Point(106, 310);
+            this.IncomeValue.Location = new System.Drawing.Point(106, 267);
             this.IncomeValue.Name = "IncomeValue";
             this.IncomeValue.Size = new System.Drawing.Size(51, 13);
             this.IncomeValue.TabIndex = 18;
@@ -297,7 +305,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(21, 340);
+            this.label15.Location = new System.Drawing.Point(18, 299);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(57, 13);
             this.label15.TabIndex = 20;
@@ -306,7 +314,7 @@
             // IncomeValue2
             // 
             this.IncomeValue2.AutoSize = true;
-            this.IncomeValue2.Location = new System.Drawing.Point(106, 340);
+            this.IncomeValue2.Location = new System.Drawing.Point(106, 299);
             this.IncomeValue2.Name = "IncomeValue2";
             this.IncomeValue2.Size = new System.Drawing.Size(57, 13);
             this.IncomeValue2.TabIndex = 21;
@@ -315,7 +323,7 @@
             // ProfitValue
             // 
             this.ProfitValue.AutoSize = true;
-            this.ProfitValue.Location = new System.Drawing.Point(106, 367);
+            this.ProfitValue.Location = new System.Drawing.Point(106, 328);
             this.ProfitValue.Name = "ProfitValue";
             this.ProfitValue.Size = new System.Drawing.Size(45, 13);
             this.ProfitValue.TabIndex = 22;
@@ -350,7 +358,7 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(211, 449);
+            this.dataGridView2.Location = new System.Drawing.Point(194, 385);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(521, 150);
@@ -439,37 +447,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kryteria";
             // 
-            // Hurwicza
+            // OSM
             // 
-            this.Hurwicza.Location = new System.Drawing.Point(160, 24);
-            this.Hurwicza.Name = "Hurwicza";
-            this.Hurwicza.Size = new System.Drawing.Size(100, 87);
-            this.Hurwicza.TabIndex = 33;
-            this.Hurwicza.Text = "-oblicz-";
-            // 
-            // Walda
-            // 
-            this.Walda.Location = new System.Drawing.Point(160, 111);
-            this.Walda.Name = "Walda";
-            this.Walda.Size = new System.Drawing.Size(118, 87);
-            this.Walda.TabIndex = 34;
-            this.Walda.Text = "-oblicz-";
-            // 
-            // Savagea
-            // 
-            this.Savagea.Location = new System.Drawing.Point(171, 213);
-            this.Savagea.Name = "Savagea";
-            this.Savagea.Size = new System.Drawing.Size(89, 52);
-            this.Savagea.TabIndex = 35;
-            this.Savagea.Text = "-oblicz-";
-            // 
-            // Laplacea
-            // 
-            this.Laplacea.Location = new System.Drawing.Point(160, 282);
-            this.Laplacea.Name = "Laplacea";
-            this.Laplacea.Size = new System.Drawing.Size(100, 92);
-            this.Laplacea.TabIndex = 36;
-            this.Laplacea.Text = "-oblicz-";
+            this.OSM.AutoSize = true;
+            this.OSM.Location = new System.Drawing.Point(171, 494);
+            this.OSM.Name = "OSM";
+            this.OSM.Size = new System.Drawing.Size(40, 13);
+            this.OSM.TabIndex = 38;
+            this.OSM.Text = "-oblicz-";
             // 
             // OW
             // 
@@ -480,20 +465,119 @@
             this.OW.TabIndex = 37;
             this.OW.Text = "-oblicz-";
             // 
-            // OSM
+            // Laplacea
             // 
-            this.OSM.AutoSize = true;
-            this.OSM.Location = new System.Drawing.Point(171, 494);
-            this.OSM.Name = "OSM";
-            this.OSM.Size = new System.Drawing.Size(40, 13);
-            this.OSM.TabIndex = 38;
-            this.OSM.Text = "-oblicz-";
+            this.Laplacea.Location = new System.Drawing.Point(160, 282);
+            this.Laplacea.Name = "Laplacea";
+            this.Laplacea.Size = new System.Drawing.Size(100, 92);
+            this.Laplacea.TabIndex = 36;
+            this.Laplacea.Text = "-oblicz-";
+            // 
+            // Savagea
+            // 
+            this.Savagea.Location = new System.Drawing.Point(171, 213);
+            this.Savagea.Name = "Savagea";
+            this.Savagea.Size = new System.Drawing.Size(89, 52);
+            this.Savagea.TabIndex = 35;
+            this.Savagea.Text = "-oblicz-";
+            // 
+            // Walda
+            // 
+            this.Walda.Location = new System.Drawing.Point(160, 111);
+            this.Walda.Name = "Walda";
+            this.Walda.Size = new System.Drawing.Size(118, 87);
+            this.Walda.TabIndex = 34;
+            this.Walda.Text = "-oblicz-";
+            // 
+            // Hurwicza
+            // 
+            this.Hurwicza.Location = new System.Drawing.Point(160, 24);
+            this.Hurwicza.Name = "Hurwicza";
+            this.Hurwicza.Size = new System.Drawing.Size(100, 87);
+            this.Hurwicza.TabIndex = 33;
+            this.Hurwicza.Text = "-oblicz-";
+            // 
+            // P1
+            // 
+            this.P1.AutoSize = true;
+            this.P1.Location = new System.Drawing.Point(18, 382);
+            this.P1.Name = "P1";
+            this.P1.Size = new System.Drawing.Size(20, 13);
+            this.P1.TabIndex = 35;
+            this.P1.Text = "P1";
+            // 
+            // P2
+            // 
+            this.P2.AutoSize = true;
+            this.P2.Location = new System.Drawing.Point(18, 429);
+            this.P2.Name = "P2";
+            this.P2.Size = new System.Drawing.Size(20, 13);
+            this.P2.TabIndex = 36;
+            this.P2.Text = "P2";
+            // 
+            // P3
+            // 
+            this.P3.AutoSize = true;
+            this.P3.Location = new System.Drawing.Point(18, 473);
+            this.P3.Name = "P3";
+            this.P3.Size = new System.Drawing.Size(20, 13);
+            this.P3.TabIndex = 37;
+            this.P3.Text = "P3";
+            // 
+            // P4
+            // 
+            this.P4.AutoSize = true;
+            this.P4.Location = new System.Drawing.Point(18, 518);
+            this.P4.Name = "P4";
+            this.P4.Size = new System.Drawing.Size(20, 13);
+            this.P4.TabIndex = 38;
+            this.P4.Text = "P4";
+            // 
+            // P1Value
+            // 
+            this.P1Value.Location = new System.Drawing.Point(103, 385);
+            this.P1Value.Name = "P1Value";
+            this.P1Value.Size = new System.Drawing.Size(85, 20);
+            this.P1Value.TabIndex = 39;
+            this.P1Value.Text = "0.25";
+            // 
+            // P2Value
+            // 
+            this.P2Value.Location = new System.Drawing.Point(103, 426);
+            this.P2Value.Name = "P2Value";
+            this.P2Value.Size = new System.Drawing.Size(85, 20);
+            this.P2Value.TabIndex = 40;
+            this.P2Value.Text = "0.25";
+            // 
+            // P3Value
+            // 
+            this.P3Value.Location = new System.Drawing.Point(103, 470);
+            this.P3Value.Name = "P3Value";
+            this.P3Value.Size = new System.Drawing.Size(85, 20);
+            this.P3Value.TabIndex = 41;
+            this.P3Value.Text = "0.25";
+            // 
+            // P4Value
+            // 
+            this.P4Value.Location = new System.Drawing.Point(103, 515);
+            this.P4Value.Name = "P4Value";
+            this.P4Value.Size = new System.Drawing.Size(85, 20);
+            this.P4Value.TabIndex = 42;
+            this.P4Value.Text = "0.25";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 626);
+            this.Controls.Add(this.P4Value);
+            this.Controls.Add(this.P3Value);
+            this.Controls.Add(this.P2Value);
+            this.Controls.Add(this.P1Value);
+            this.Controls.Add(this.P4);
+            this.Controls.Add(this.P3);
+            this.Controls.Add(this.P2);
+            this.Controls.Add(this.P1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.calculationButton);
             this.Controls.Add(this.dataGridView2);
@@ -569,6 +653,14 @@
         private System.Windows.Forms.Label Savagea;
         private System.Windows.Forms.Label Walda;
         private System.Windows.Forms.Label Hurwicza;
+        private System.Windows.Forms.Label P1;
+        private System.Windows.Forms.Label P2;
+        private System.Windows.Forms.Label P3;
+        private System.Windows.Forms.Label P4;
+        private System.Windows.Forms.TextBox P1Value;
+        private System.Windows.Forms.TextBox P2Value;
+        private System.Windows.Forms.TextBox P3Value;
+        private System.Windows.Forms.TextBox P4Value;
     }
 }
 
