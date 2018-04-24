@@ -80,6 +80,9 @@
             this.P2Value = new System.Windows.Forms.TextBox();
             this.P3Value = new System.Windows.Forms.TextBox();
             this.P4Value = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.OWDI = new System.Windows.Forms.Label();
+            this.domination = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -428,6 +431,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.OWDI);
+            this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.OSM);
             this.groupBox2.Controls.Add(this.OW);
             this.groupBox2.Controls.Add(this.Laplacea);
@@ -442,7 +447,7 @@
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Location = new System.Drawing.Point(738, 28);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(284, 571);
+            this.groupBox2.Size = new System.Drawing.Size(284, 645);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kryteria";
@@ -450,7 +455,7 @@
             // OSM
             // 
             this.OSM.AutoSize = true;
-            this.OSM.Location = new System.Drawing.Point(171, 494);
+            this.OSM.Location = new System.Drawing.Point(160, 494);
             this.OSM.Name = "OSM";
             this.OSM.Size = new System.Drawing.Size(40, 13);
             this.OSM.TabIndex = 38;
@@ -475,7 +480,7 @@
             // 
             // Savagea
             // 
-            this.Savagea.Location = new System.Drawing.Point(171, 213);
+            this.Savagea.Location = new System.Drawing.Point(160, 213);
             this.Savagea.Name = "Savagea";
             this.Savagea.Size = new System.Drawing.Size(89, 52);
             this.Savagea.TabIndex = 35;
@@ -565,11 +570,38 @@
             this.P4Value.TabIndex = 42;
             this.P4Value.Text = "0.25";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(17, 578);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(37, 13);
+            this.label19.TabIndex = 39;
+            this.label19.Text = "OWDI";
+            // 
+            // OWDI
+            // 
+            this.OWDI.AutoSize = true;
+            this.OWDI.Location = new System.Drawing.Point(160, 578);
+            this.OWDI.Name = "OWDI";
+            this.OWDI.Size = new System.Drawing.Size(40, 13);
+            this.OWDI.TabIndex = 40;
+            this.OWDI.Text = "-oblicz-";
+            // 
+            // domination
+            // 
+            this.domination.Location = new System.Drawing.Point(191, 553);
+            this.domination.Name = "domination";
+            this.domination.Size = new System.Drawing.Size(524, 120);
+            this.domination.TabIndex = 43;
+            this.domination.Text = "-decyzje zdominowane-";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 626);
+            this.ClientSize = new System.Drawing.Size(1034, 697);
+            this.Controls.Add(this.domination);
             this.Controls.Add(this.P4Value);
             this.Controls.Add(this.P3Value);
             this.Controls.Add(this.P2Value);
@@ -661,6 +693,9 @@
         private System.Windows.Forms.TextBox P2Value;
         private System.Windows.Forms.TextBox P3Value;
         private System.Windows.Forms.TextBox P4Value;
+        private System.Windows.Forms.Label OWDI;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label domination;
     }
 }
 
