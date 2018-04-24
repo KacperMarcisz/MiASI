@@ -129,7 +129,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Oblicz koszt";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // price1
             // 
@@ -340,7 +340,7 @@
             this.readDataButton.TabIndex = 23;
             this.readDataButton.Text = "Wczytaj dane z pliku";
             this.readDataButton.UseVisualStyleBackColor = true;
-            this.readDataButton.Click += new System.EventHandler(this.readDataButton_Click);
+            this.readDataButton.Click += new System.EventHandler(this.ReadDataButton_Click);
             // 
             // openFileDialog1
             // 
@@ -375,7 +375,7 @@
             this.calculationButton.TabIndex = 26;
             this.calculationButton.Text = "Oblicz kryteria";
             this.calculationButton.UseVisualStyleBackColor = true;
-            this.calculationButton.Click += new System.EventHandler(this.calculationButton_Click);
+            this.calculationButton.Click += new System.EventHandler(this.CalculationButton_Click);
             // 
             // label8
             // 
